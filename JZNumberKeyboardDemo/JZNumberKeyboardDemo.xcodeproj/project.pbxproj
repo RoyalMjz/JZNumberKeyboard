@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4938100E1DF9993B009F65F3 /* JZNumberKeyboard.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4938100B1DF9993B009F65F3 /* JZNumberKeyboard.bundle */; settings = {ASSET_TAGS = (); }; };
+		4938100F1DF9993B009F65F3 /* JZNumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4938100D1DF9993B009F65F3 /* JZNumberKeyboard.m */; settings = {ASSET_TAGS = (); }; };
 		4939A5801DEEB22F0042DAE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939A57F1DEEB22F0042DAE1 /* main.m */; };
 		4939A5831DEEB22F0042DAE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939A5821DEEB22F0042DAE1 /* AppDelegate.m */; };
 		4939A5851DEEB22F0042DAE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4939A5841DEEB22F0042DAE1 /* Assets.xcassets */; };
@@ -14,8 +16,6 @@
 		4939A5931DEEB2300042DAE1 /* JZNumberKeyboardDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939A5921DEEB2300042DAE1 /* JZNumberKeyboardDemoTests.m */; };
 		4939A59E1DEEB2300042DAE1 /* JZNumberKeyboardDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939A59D1DEEB2300042DAE1 /* JZNumberKeyboardDemoUITests.m */; };
 		4939A5AD1DEEB2560042DAE1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939A5AC1DEEB2560042DAE1 /* MainViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4939A5BF1DEEB90D0042DAE1 /* JZNumberKeyboard.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4939A5BC1DEEB90D0042DAE1 /* JZNumberKeyboard.bundle */; settings = {ASSET_TAGS = (); }; };
-		4939A5C01DEEB90D0042DAE1 /* JZNumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939A5BE1DEEB90D0042DAE1 /* JZNumberKeyboard.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4938100B1DF9993B009F65F3 /* JZNumberKeyboard.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JZNumberKeyboard.bundle; sourceTree = "<group>"; };
+		4938100C1DF9993B009F65F3 /* JZNumberKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNumberKeyboard.h; sourceTree = "<group>"; };
+		4938100D1DF9993B009F65F3 /* JZNumberKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZNumberKeyboard.m; sourceTree = "<group>"; };
 		4939A57B1DEEB22F0042DAE1 /* JZNumberKeyboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JZNumberKeyboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4939A57F1DEEB22F0042DAE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4939A5811DEEB22F0042DAE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,9 +54,6 @@
 		4939A59F1DEEB2300042DAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4939A5AB1DEEB2560042DAE1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4939A5AC1DEEB2560042DAE1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		4939A5BC1DEEB90D0042DAE1 /* JZNumberKeyboard.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JZNumberKeyboard.bundle; sourceTree = "<group>"; };
-		4939A5BD1DEEB90D0042DAE1 /* JZNumberKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNumberKeyboard.h; sourceTree = "<group>"; };
-		4939A5BE1DEEB90D0042DAE1 /* JZNumberKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZNumberKeyboard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4938100A1DF9993B009F65F3 /* JZNumberKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4938100B1DF9993B009F65F3 /* JZNumberKeyboard.bundle */,
+				4938100C1DF9993B009F65F3 /* JZNumberKeyboard.h */,
+				4938100D1DF9993B009F65F3 /* JZNumberKeyboard.m */,
+			);
+			path = JZNumberKeyboard;
+			sourceTree = "<group>";
+		};
 		4939A5721DEEB22F0042DAE1 = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +114,7 @@
 		4939A57D1DEEB22F0042DAE1 /* JZNumberKeyboardDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4939A5BB1DEEB90C0042DAE1 /* JZNumberKeyboard */,
+				4938100A1DF9993B009F65F3 /* JZNumberKeyboard */,
 				4939A5811DEEB22F0042DAE1 /* AppDelegate.h */,
 				4939A5821DEEB22F0042DAE1 /* AppDelegate.m */,
 				4939A5AB1DEEB2560042DAE1 /* MainViewController.h */,
@@ -141,16 +151,6 @@
 				4939A59F1DEEB2300042DAE1 /* Info.plist */,
 			);
 			path = JZNumberKeyboardDemoUITests;
-			sourceTree = "<group>";
-		};
-		4939A5BB1DEEB90C0042DAE1 /* JZNumberKeyboard */ = {
-			isa = PBXGroup;
-			children = (
-				4939A5BC1DEEB90D0042DAE1 /* JZNumberKeyboard.bundle */,
-				4939A5BD1DEEB90D0042DAE1 /* JZNumberKeyboard.h */,
-				4939A5BE1DEEB90D0042DAE1 /* JZNumberKeyboard.m */,
-			);
-			path = JZNumberKeyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4939A5BF1DEEB90D0042DAE1 /* JZNumberKeyboard.bundle in Resources */,
+				4938100E1DF9993B009F65F3 /* JZNumberKeyboard.bundle in Resources */,
 				4939A5851DEEB22F0042DAE1 /* Assets.xcassets in Resources */,
 				4939A5881DEEB22F0042DAE1 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -286,7 +286,7 @@
 				4939A5831DEEB22F0042DAE1 /* AppDelegate.m in Sources */,
 				4939A5AD1DEEB2560042DAE1 /* MainViewController.m in Sources */,
 				4939A5801DEEB22F0042DAE1 /* main.m in Sources */,
-				4939A5C01DEEB90D0042DAE1 /* JZNumberKeyboard.m in Sources */,
+				4938100F1DF9993B009F65F3 /* JZNumberKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
