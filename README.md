@@ -31,7 +31,7 @@ JZNumberKeyboard is a custom numeric keypad.
 
 ```
 //初始化数字键盘
-JZNumberKeyboard *keyBoard = [[JZNumberKeyboard alloc] initWithTitleColor:nil backGroundImage:[UIImage imageNamed:@"keyboardImage"]];
+JZNumberKeyboard *keyBoard = [[JZNumberKeyboard alloc] init];
 //输入视图textfield&textView
 [keyBoard setInputView:textField];
 //添加到主视图中

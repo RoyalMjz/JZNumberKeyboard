@@ -10,6 +10,11 @@
 
 @interface JZNumberKeyboard : UIView
 
+/**
+ *  传入想改变键盘的输入框
+ *
+ *  @param TextFirld & TextView
+ */
 - (void)setInputView:(UIView *)view;
 
 @end

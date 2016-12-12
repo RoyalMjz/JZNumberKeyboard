@@ -20,9 +20,7 @@ static CGFloat const marginvalue = 0.5;
 
 @implementation JZNumberKeyboard
 
-/**
- *  初始化
- */
+#pragma mark - 初始化
 - (instancetype)init{
     
     self = [super init];

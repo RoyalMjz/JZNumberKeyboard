@@ -26,11 +26,11 @@
     _textField.delegate = self;
     _textField.keyboardType = UIKeyboardTypeDefault;
     
-    
     JZNumberKeyboard *keyBoard = [[JZNumberKeyboard alloc] init];
     [keyBoard setInputView:_textField];
-
+    
     [self.view addSubview:_textField];
+    
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
