@@ -16,7 +16,7 @@
 ## Introduction
 
 
-JZNumberKeyboard is a custom numeric keypad.
+JZNumberKeyboard is a custom numeric keyboard.
 
 ![](https://raw.githubusercontent.com/RoyalMjz/JZNumberKeyboard/master/Screenshots/Screenshots.png)
 
