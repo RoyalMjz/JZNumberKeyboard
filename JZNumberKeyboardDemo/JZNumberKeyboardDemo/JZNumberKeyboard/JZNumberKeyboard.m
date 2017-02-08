@@ -152,12 +152,93 @@ static CGFloat const marginvalue = 0.5;
     }
 }
 
-//输入
+//输入（数字逻辑 保留两位小数等。。）
 -(void)numberBtnAction:(UIButton *)btn{
-    
+    if (![inputView isKindOfClass:[UITextField class]]) {
+        return;
+    }
     if ([inputView isFirstResponder]) {
         
-        [inputView insertText:btn.titleLabel.text];
+        NSString *single = btn.titleLabel.text;
+        NSString *string = ((UITextField *)inputView).text;
+        BOOL _isHaveDian;
+        BOOL _isFirstZero;
+        
+        NSUInteger length;
+        if ([string rangeOfString:@"."].location==NSNotFound) {
+            _isHaveDian = NO;
+            length = string.length;
+        }else{
+            _isHaveDian = YES;
+            length = [string rangeOfString:@"."].location;
+        }
+        //最大限制小数点前9位
+        if (length > 8) {
+            return;
+        }
+        
+        if ([string rangeOfString:@"0"].location!=0) {
+            _isFirstZero = NO;
+        }else{
+            _isFirstZero = YES;
+        }
+        
+        if([string length]==0){
+            if([single  isEqual: @"."]){
+                [inputView insertText:@"0."];
+                return;
+            }
+            if ([single  isEqual: @"0"]) {
+                _isFirstZero = YES;
+                [inputView insertText:single];
+                return;
+            }
+        }
+        
+        if ([single isEqual: @"."]) {
+            if(!_isHaveDian){
+                //text中还没有小数点
+                _isHaveDian=YES;
+                [inputView insertText:single];
+            }else{
+                return;
+            }
+        }else if ([single isEqual: @"0"]){
+            if ((_isFirstZero&&_isHaveDian)||(!_isFirstZero&&_isHaveDian)){
+                //首位有0有.（0.01）或首位没0有.（10200.00）可输入两位数的0
+                if([string isEqualToString:@"0.0"]){
+                    return;
+                }
+                NSRange ran=[string rangeOfString:@"."];
+                int tt=(int)(string.length-ran.location);
+                if (tt <= 2){
+                    [inputView insertText:single];
+                }else{
+                    return;
+                }
+            }else if (_isFirstZero&&!_isHaveDian){
+                //首位有0没.不能再输入0
+                return;
+            }else{
+                [inputView insertText:single];
+            }
+        }else{
+            if (_isHaveDian){
+                //存在小数点，保留两位小数
+                NSRange ran=[string rangeOfString:@"."];
+                int tt= (int)(string.length-ran.location);
+                if (tt <= 2){
+                    [inputView insertText:single];
+                }else{
+                    return;
+                }
+            }else if(_isFirstZero&&!_isHaveDian){
+                //首位有0没点
+                ((UITextField *)inputView).text = single;
+            }else{
+                [inputView insertText:single];
+            }
+        }
     }
 }
 
